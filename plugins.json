@@ -1,0 +1,591 @@
+[
+    {
+        "iconUrl": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://animesuge.cz&size=64",
+        "fileHash": "sha256-3fb9cd067522309efec6d6876a11182f93f3b888bb23747f53ae146adc279250",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension",
+        "fileSize": 31937,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Anime",
+            "AnimeMovie",
+            "OVA"
+        ],
+        "version": 2,
+        "internalName": "AnimeSuge",
+        "url": "https://raw.githubusercontent.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension/builds/AnimeSuge.cs3",
+        "name": "AnimeSuge"
+    },
+    {
+        "iconUrl": "https://play-lh.googleusercontent.com/G9s84Cm1TDnKDX2P8nipS_s60cuCnYtjBRRLespF8nivjXmbV9tF1fY37clZhXMLaA",
+        "fileHash": "sha256-92a980c2894f7838bb4d1290b8cc3ade478eecd70a22acdfe0e121759d3d5c93",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension",
+        "fileSize": 81566,
+        "status": 3,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Anime",
+            "Movies",
+            "TvSeries",
+            "Documentary"
+        ],
+        "version": 24,
+        "internalName": "BilibiliProvider",
+        "description": "Bilibili TV - International streaming platform for anime, movies, and variety shows (bilibili.tv)",
+        "url": "https://raw.githubusercontent.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension/builds/BilibiliProvider.cs3",
+        "name": "BilibiliProvider"
+    },
+    {
+        "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/CastleTvProvider/icon.png",
+        "fileHash": "sha256-9b5a6c920fe39fc1373c78cbdcfa921b7f08ecd63ba8a4b81549af34d704aad3",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension",
+        "fileSize": 64651,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "CNCVerse"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 29,
+        "internalName": "CastleTvProvider",
+        "description": "Castle TV Movies and Series Provider",
+        "url": "https://raw.githubusercontent.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension/builds/CastleTvProvider.cs3",
+        "name": "CastleTvProvider"
+    },
+    {
+        "iconUrl": "https://modapk.world/wp-content/uploads/2025/11/Et-90x90.png",
+        "fileHash": "sha256-3ff9e00fb83fca31e1297f23a7f5afa6f17d6078fd3ff849fe05a05c535bb32b",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension",
+        "fileSize": 37574,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "CNCVerse"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 24,
+        "internalName": "CineTvProvider",
+        "description": "Clone of Cinema, Memesapp , FilmTV etc",
+        "url": "https://raw.githubusercontent.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension/builds/CineTvProvider.cs3",
+        "name": "CineTvProvider"
+    },
+    {
+        "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/CNC%20Verse/icon.png",
+        "fileHash": "sha256-9444b4186ddaa9f65342d9ea14797e1dc73024169f818cf63c77e19dfbb6d166",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension",
+        "fileSize": 71696,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 81,
+        "internalName": "CNC Verse",
+        "description": "Netflix, PrimeVideo, Disney+ Hotstar Contents in Multiple Languages",
+        "url": "https://raw.githubusercontent.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension/builds/CNC Verse.cs3",
+        "name": "CNC Verse"
+    },
+    {
+        "iconUrl": "https://cricfy.pro/wp-content/uploads/2024/11/cropped-cricfytv-2.png",
+        "fileHash": "sha256-9a3e9463da9d5d2f8dcac69deabf1a6cbdbc0db44dabf4f2eeae9d9b8d2d3345",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension",
+        "fileSize": 88891,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 50,
+        "internalName": "CricifyProvider",
+        "description": "Watch Live sports and TV channels",
+        "url": "https://raw.githubusercontent.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension/builds/CricifyProvider.cs3",
+        "name": "CricifyProvider"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=desi-serials.to&sz=%size%",
+        "fileHash": "sha256-2eb767187b7592288e0d3b25a01352dd9b8119b170ddf455933a645d1d6625d2",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension",
+        "fileSize": 35683,
+        "status": 1,
+        "language": "hi",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "TvSeries"
+        ],
+        "version": 19,
+        "internalName": "DesiSerialsProvider",
+        "description": "Desi Serials Tv Shows Provider",
+        "url": "https://raw.githubusercontent.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension/builds/DesiSerialsProvider.cs3",
+        "name": "DesiSerialsProvider"
+    },
+    {
+        "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/DoFlixProvider/icon.png",
+        "fileHash": "sha256-8311331668a9518a025ba99eac31954f0fb665e5d88ada1f0123a55502839f9a",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension",
+        "fileSize": 65673,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 24,
+        "internalName": "DoFlixProvider",
+        "description": "DoFlix Provider for Movies and TV Series",
+        "url": "https://raw.githubusercontent.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension/builds/DoFlixProvider.cs3",
+        "name": "DoFlixProvider"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/master/EinthusanProvider/icon.png",
+        "fileHash": "sha256-955b882e3ecaa84e58ac8d07fd679ebef3025a35bbbb0fb7533925cda2ccab9f",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension",
+        "fileSize": 20672,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Movie"
+        ],
+        "version": 26,
+        "internalName": "EinthusanProvider",
+        "description": "Indian Multi-language HD Provider",
+        "url": "https://raw.githubusercontent.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension/builds/EinthusanProvider.cs3",
+        "name": "EinthusanProvider"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=goldenaudiobook.com/&sz=%size%",
+        "fileHash": "sha256-1618232e6f96d6dda6889099d7ad5e42db91af2af2191921e6bb5a25c601b552",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension",
+        "fileSize": 14668,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Others"
+        ],
+        "version": 21,
+        "internalName": "GoldenAudiobook",
+        "description": "Audiobooks - Use Picture in Picture or VLC as external player",
+        "url": "https://raw.githubusercontent.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension/builds/GoldenAudiobook.cs3",
+        "name": "GoldenAudiobook"
+    },
+    {
+        "iconUrl": "https://images.dwncdn.net/images/t_app-icon-l/p/b0c9663c-0d61-4941-b12f-91c58c06189f/1137087733/hdo-box-logo",
+        "fileHash": "sha256-1ccc7f82cf3cf8473d1be5c4dcf01cb9f3725d886874982ea3af5d1fcc9dfeae",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension",
+        "fileSize": 28763,
+        "status": 0,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Movies",
+            "TvSeries"
+        ],
+        "version": 24,
+        "internalName": "HDOProvider",
+        "description": "HDO provider",
+        "url": "https://raw.githubusercontent.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension/builds/HDOProvider.cs3",
+        "name": "HDOProvider"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=rezka.ag&sz=%size%",
+        "fileHash": "sha256-8110e4859aba54efaab93d47011470790a740f0cb8ebec6d97651cf858acd3ec",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension",
+        "fileSize": 36237,
+        "status": 1,
+        "language": "ru",
+        "authors": [
+            "Hexated, NivinCNC"
+        ],
+        "tvTypes": [
+            "AsianDrama",
+            "Anime",
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 23,
+        "internalName": "HDrezkaProvider",
+        "url": "https://raw.githubusercontent.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension/builds/HDrezkaProvider.cs3",
+        "name": "HDrezkaProvider"
+    },
+    {
+        "iconUrl": "https://mlsbd.co/wp-content/uploads/2020/08/MLSBD-Logo.png",
+        "fileHash": "sha256-9d5d3b7d5acbc0a9530fa945b19d79d5728509e940633565fee08089cadd0d76",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension",
+        "fileSize": 52009,
+        "status": 1,
+        "language": "bn",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries",
+            "AnimeMovie",
+            "AsianDrama"
+        ],
+        "version": 21,
+        "internalName": "MLSBDProvider",
+        "description": "The largest movie link store in Bangladesh",
+        "url": "https://raw.githubusercontent.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension/builds/MLSBDProvider.cs3",
+        "name": "MLSBDProvider"
+    },
+    {
+        "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/MovieBoxProvider/icon.png",
+        "fileHash": "sha256-51a27d640d7cb6a215644f75d5f9370020ba9a7c8d49d878f7b926b46f4d875d",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension",
+        "fileSize": 72769,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 32,
+        "internalName": "MovieBoxProvider",
+        "description": "Multi Language Movies and Series Provider",
+        "url": "https://raw.githubusercontent.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension/builds/MovieBoxProvider.cs3",
+        "name": "MovieBoxProvider"
+    },
+    {
+        "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/MovieBoxProviderIN/icon.png",
+        "fileHash": "sha256-e6efd70269db6cb89bd794df433df7eca0329467c2fa61717b6eb47a1cc9f9e3",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension",
+        "fileSize": 70230,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 34,
+        "internalName": "MovieBoxProviderIN",
+        "description": "Multi Language Movies and Series Provider (Local homepage based on region)",
+        "url": "https://raw.githubusercontent.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension/builds/MovieBoxProviderIN.cs3",
+        "name": "MovieBoxProviderIN"
+    },
+    {
+        "iconUrl": "https://movielinkbd.one/img/favicon-192x192.png",
+        "fileHash": "sha256-2a92a3829566a5b12749010a8b8beb1e00c651e11dea42f768982c525613af92",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension",
+        "fileSize": 24074,
+        "status": 1,
+        "language": "bn",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries",
+            "AnimeMovie",
+            "AsianDrama"
+        ],
+        "version": 3,
+        "internalName": "MovieLinkBDProvider",
+        "description": "MovieLinkBD - Largest Movie Download Site in Bangladesh",
+        "url": "https://raw.githubusercontent.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension/builds/MovieLinkBDProvider.cs3",
+        "name": "MovieLinkBDProvider"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/master/MoviezwapProvider/icon.png",
+        "fileHash": "sha256-eb72be30b8e224c51f703567b82ab1b0acfeabc289484dba072a7c58878017ba",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension",
+        "fileSize": 19584,
+        "status": 1,
+        "language": "te",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Movie"
+        ],
+        "version": 20,
+        "internalName": "MoviezwapProvider",
+        "description": "Telugu Movies Provider - Moviezwap",
+        "url": "https://raw.githubusercontent.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension/builds/MoviezwapProvider.cs3",
+        "name": "MoviezwapProvider"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/refs/heads/master/PikashowProvider/logo.png",
+        "fileHash": "sha256-10fccc4456cb3d8cc6aa7e7c25e4218ff9774beff8311293f952ea77dabe6853",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension",
+        "fileSize": 62273,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 21,
+        "internalName": "PikashowProvider",
+        "description": "Stream movies and series from Pikashow",
+        "url": "https://raw.githubusercontent.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension/builds/PikashowProvider.cs3",
+        "name": "PikashowProvider"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=playztv.top&sz=%size%",
+        "fileHash": "sha256-db3371674b6a9e8e4a58f44b66add6ad542a29c8fa6f6419d3ed13ae07398055",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension",
+        "fileSize": 81892,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 16,
+        "internalName": "PlayZTVProvider",
+        "description": "Watch Live TV channels & sports via PlayZTV",
+        "url": "https://raw.githubusercontent.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension/builds/PlayZTVProvider.cs3",
+        "name": "PlayZTVProvider"
+    },
+    {
+        "iconUrl": "https://cdn.mytuner.mobi/static/ctr/icons/App_192x192/in.png",
+        "fileHash": "sha256-5a14d5aaa856aded8f122ebf9731bb57c2229d66938052f6e00104a93b720fce",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension",
+        "fileSize": 13667,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 21,
+        "internalName": "RadioIndiaProvider",
+        "description": "Radio India Provider",
+        "url": "https://raw.githubusercontent.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension/builds/RadioIndiaProvider.cs3",
+        "name": "RadioIndiaProvider"
+    },
+    {
+        "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/Rtally/icon.png",
+        "fileHash": "sha256-a2f929e54ab23d728791da58ff8a60a9f44d7485c98b246155d145a9703dd07e",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension",
+        "fileSize": 18596,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "Redowan, NivinCNC"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries",
+            "Anime",
+            "AnimeMovie",
+            "AsianDrama"
+        ],
+        "version": 36,
+        "internalName": "Rtally",
+        "description": "Movie and TV Series provider",
+        "url": "https://raw.githubusercontent.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension/builds/Rtally.cs3",
+        "name": "Rtally"
+    },
+    {
+        "iconUrl": "https://appteka.store/get/a20p17EuCKFD08AaFsfH3JSJ6OU30ccp18WrKaNDze4LqOsDArhKj13-f-SjAayiWJH6P6pv9AlzhcfzEXlmRokU-I4=/726bbb91e36da425f55efce72cccb3a82df1d265.png",
+        "fileHash": "sha256-7471ea4ec0990d1c91a9537d0dc8a492f11a3b3fc8aaf5d96b1c94cb913c0a08",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension",
+        "fileSize": 94855,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 32,
+        "internalName": "SKTechProvider",
+        "description": "Watch Live sports and TV channels via SK Tech",
+        "url": "https://raw.githubusercontent.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension/builds/SKTechProvider.cs3",
+        "name": "SKTechProvider"
+    },
+    {
+        "iconUrl": "https://play-lh.googleusercontent.com/7geBQBtW_yN70BU81Oi2SoZvYsj5VoYrI4FmUNdqWQlchtExJb7XE_1BQysGzgJ6mBU",
+        "fileHash": "sha256-9f966d9793b7884807f6ac272c28555c76a138dcdd1d13028806015e79589688",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension",
+        "fileSize": 46189,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries",
+            "Anime"
+        ],
+        "version": 23,
+        "internalName": "StreamFlixProvider",
+        "description": "StreamFlix Multi Language Movies and Series Provider",
+        "url": "https://raw.githubusercontent.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension/builds/StreamFlixProvider.cs3",
+        "name": "StreamFlixProvider"
+    },
+    {
+        "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/TamilDhoolProvider/icon.png",
+        "fileHash": "sha256-b6f493f5f383737570721ec615bcbcae35a217586caed51c9b0071d71930623c",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension",
+        "fileSize": 23837,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "TvSeries"
+        ],
+        "version": 25,
+        "internalName": "TamilDhoolProvider",
+        "description": "Tamil Tv Serial/Shows Provider",
+        "url": "https://raw.githubusercontent.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension/builds/TamilDhoolProvider.cs3",
+        "name": "TamilDhoolProvider"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=tamilian.io&sz=%size%",
+        "fileHash": "sha256-e3edf8b0b490bd0e931918a7b9dddf486dfce8d737647464757f3038266a530f",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension",
+        "fileSize": 18990,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Movies"
+        ],
+        "version": 21,
+        "internalName": "Tamilian",
+        "description": "Movies (Tamil)",
+        "url": "https://raw.githubusercontent.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension/builds/Tamilian.cs3",
+        "name": "Tamilian"
+    },
+    {
+        "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/TamilUltraProvider/icon.png",
+        "fileHash": "sha256-738c110e327f674fb57de6ec6d9675e65377a5487cc3470b71ca4b17f971aefa",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension",
+        "fileSize": 16031,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 29,
+        "internalName": "TamilUltraProvider",
+        "description": "Indian Live TV Provider",
+        "url": "https://raw.githubusercontent.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension/builds/TamilUltraProvider.cs3",
+        "name": "TamilUltraProvider"
+    },
+    {
+        "iconUrl": "https://editorialge.com/wp-content/uploads/2023/07/Watch32..jpg",
+        "fileHash": "sha256-c2964a574801947bc55ace3d656f04148f4c6312ce615cfe5791cb7f44fecf23",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension",
+        "fileSize": 31518,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 23,
+        "internalName": "Watch32",
+        "description": "Watch32 is a Free Movies streaming site with over 10000 movies and TV-Series.",
+        "url": "https://raw.githubusercontent.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension/builds/Watch32.cs3",
+        "name": "Watch32"
+    },
+    {
+        "iconUrl": "https://play-lh.googleusercontent.com/zVq_wAus2snoO-ggyI6IomlsCzfybAozQOGYpBrv71r1--rOYOYWsr_N7DWwVp9t7ro=s248-rw",
+        "fileHash": "sha256-da3fecec4ffa079146e04f2ff6f65b3e3751591c48e0032ff50f55dbd7aab16b",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension",
+        "fileSize": 44332,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie",
+            "Anime"
+        ],
+        "version": 24,
+        "internalName": "XonProvider",
+        "description": "Xon Provider for Anime and Cartoons - Tamil, Hindi, Telugu, English, Japanese",
+        "url": "https://raw.githubusercontent.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension/builds/XonProvider.cs3",
+        "name": "XonProvider"
+    }
+]
