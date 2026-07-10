@@ -1,0 +1,9 @@
+{
+  "name": "Xitize Ad-Free Repo",
+  "iconUrl": "https://avatars.githubusercontent.com/Xitizeofficial",
+  "description": "100% Clean and Ad-Free Extensions",
+  "manifestVersion": 1,
+  "pluginLists": [
+    "https://raw.githubusercontent.com/Xitizeofficial/CNCVerse-Cloud-Stream-Extension/builds/plugins.json"
+  ]
+}
