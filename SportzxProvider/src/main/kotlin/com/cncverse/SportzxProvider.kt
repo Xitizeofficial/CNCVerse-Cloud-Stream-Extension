@@ -61,13 +61,6 @@ class SportzxProvider(
     private val customMainUrl: String = "https://fifabd.site/OPLLX7/LIVE2.m3u"
 ) : MainAPI() {
     companion object {
-        
-        private const val OMG10 = "aHR0cHM6Ly9vbWcxMC5jb20vNC8xMTEwNDQ4OQ=="
-        @Volatile private var lastBrowserOpenMs = 0L
-        @Volatile private var telegramPopupShown = false
-        @Volatile private var subscriptionPopupShown = false
-        private const val BROWSER_DEBOUNCE_MS = 10_000L
-
         var context: android.content.Context? = null
         const val EXT_M3U = "#EXTM3U"
         const val EXT_INF = "#EXTINF"
@@ -104,41 +97,41 @@ class SportzxProvider(
         }
     }
 
-private fun String.base64ToHexOrNull(): String? {
-    val raw = trim()
-    val normalizedHex = raw.replace("-", "")
-    if (normalizedHex.isNotEmpty() && normalizedHex.length % 2 == 0 && normalizedHex.matches(Regex("^[0-9a-fA-F]+$"))) {
-        return normalizedHex.lowercase()
+    private fun String.base64ToHexOrNull(): String? {
+        val raw = trim()
+        val normalizedHex = raw.replace("-", "")
+        if (normalizedHex.isNotEmpty() && normalizedHex.length % 2 == 0 && normalizedHex.matches(Regex("^[0-9a-fA-F]+$"))) {
+            return normalizedHex.lowercase()
+        }
+
+        return try {
+            val normalized = raw
+                .replace('-', '+')
+                .replace('_', '/')
+                .let { value ->
+                    val padding = (4 - (value.length % 4)) % 4
+                    value + "=".repeat(padding)
+                }
+            val decoded = Base64.decode(normalized, Base64.DEFAULT)
+            decoded.joinToString(separator = "") { byte -> "%02x".format(byte) }
+        } catch (_: Exception) {
+            null
+        }
     }
 
-    return try {
-        val normalized = raw
-            .replace('-', '+')
-            .replace('_', '/')
-            .let { value ->
-                val padding = (4 - (value.length % 4)) % 4
-                value + "=".repeat(padding)
-            }
-        val decoded = Base64.decode(normalized, Base64.DEFAULT)
-        decoded.joinToString(separator = "") { byte -> "%02x".format(byte) }
-    } catch (_: Exception) {
-        null
-    }
-}
+    private fun String.hexToBase64UrlOrNull(): String? {
+        val normalizedHex = trim().replace("-", "")
+        if (normalizedHex.isEmpty() || normalizedHex.length % 2 != 0 || !normalizedHex.matches(Regex("^[0-9a-fA-F]+$"))) {
+            return null
+        }
 
-private fun String.hexToBase64UrlOrNull(): String? {
-    val normalizedHex = trim().replace("-", "")
-    if (normalizedHex.isEmpty() || normalizedHex.length % 2 != 0 || !normalizedHex.matches(Regex("^[0-9a-fA-F]+$"))) {
-        return null
+        return try {
+            val bytes = normalizedHex.chunked(2).map { it.toInt(16).toByte() }.toByteArray()
+            Base64.encodeToString(bytes, Base64.URL_SAFE or Base64.NO_PADDING or Base64.NO_WRAP)
+        } catch (_: Exception) {
+            null
+        }
     }
-
-    return try {
-        val bytes = normalizedHex.chunked(2).map { it.toInt(16).toByte() }.toByteArray()
-        Base64.encodeToString(bytes, Base64.URL_SAFE or Base64.NO_PADDING or Base64.NO_WRAP)
-    } catch (_: Exception) {
-        null
-    }
-}
 
     private fun decryptContent(content: String): String {
         return try {
@@ -181,7 +174,7 @@ private fun String.hexToBase64UrlOrNull(): String? {
         }
     }
 
-  private fun getMpdStream(url: String, customHeaders: Map<String, String>): String {
+    private fun getMpdStream(url: String, customHeaders: Map<String, String>): String {
         val client = OkHttpClient.Builder()
             .addInterceptor(HeaderReplacementInterceptor(customHeaders))
             .build()
@@ -195,8 +188,8 @@ private fun String.hexToBase64UrlOrNull(): String? {
         }
     }
 
-  private fun getDRMKeysFromLicenseServer(url: String, kid: String): String {
-      val userAgent = "Dalvik/2.1.0 (Linux; U; Android)"
+    private fun getDRMKeysFromLicenseServer(url: String, kid: String): String {
+        val userAgent = "Dalvik/2.1.0 (Linux; U; Android)"
         val client = OkHttpClient.Builder()
             .addInterceptor(HeaderReplacementInterceptor(
               mapOf(
@@ -231,12 +224,7 @@ private fun String.hexToBase64UrlOrNull(): String? {
     override suspend fun getMainPage(
         page: Int,
         request : MainPageRequest
-    ): HomePageResponse {         }
-      
-
-        // Show star popup on first visit (shared across all CNCVerse plugins)
-
-        
+    ): HomePageResponse {         
         val rawContent = getWithCustomHeaders(mainUrl)
         val decryptedContent = decryptContent(rawContent)
         val data = IptvPlaylistParser().parseM3U(decryptedContent)
@@ -300,6 +288,7 @@ private fun String.hexToBase64UrlOrNull(): String? {
             this.plot=data.nation
         }
     }
+
     data class LoadData(
         val url: String,
         val title: String,
@@ -313,111 +302,8 @@ private fun String.hexToBase64UrlOrNull(): String? {
         val drmKeys: Map<String, String> = emptyMap(),
         val headers: Map<String, String>,
     )
-    
 
-    private fun showTelegramPopup() {
-        val ctx = context ?: return
-        if (telegramPopupShown) return
-        val isTV = try {
-            com.lagradost.cloudstream3.ui.settings.Globals.isLayout(com.lagradost.cloudstream3.ui.settings.Globals.TV)
-        } catch(e: Exception) { false }
-        if (isTV) return
-        val prefs = ctx.getSharedPreferences("cncverse_prefs", android.content.Context.MODE_PRIVATE)
-        if (prefs.getBoolean("telegram_popup_shown", false)) { telegramPopupShown = true; return }
-        telegramPopupShown = true
-        prefs.edit().putBoolean("telegram_popup_shown", true).apply()
-        android.os.Handler(android.os.Looper.getMainLooper()).post {
-            try {
-                val dp = ctx.resources.displayMetrics.density
-                val bgDraw = android.graphics.drawable.GradientDrawable().apply {
-                    setColor(android.graphics.Color.parseColor("#1A1A2E"))
-                    cornerRadius = 16f * dp
-                }
-                val root = android.widget.LinearLayout(ctx).apply {
-                    orientation = android.widget.LinearLayout.VERTICAL
-                    setPadding((24 * dp).toInt(), (20 * dp).toInt(), (24 * dp).toInt(), (16 * dp).toInt())
-                    background = bgDraw
-                }
-                val titleTv = android.widget.TextView(ctx).apply {
-                    text = "💬 Join CNCVerse Community"
-                    setTextColor(android.graphics.Color.WHITE); textSize = 17f
-                    typeface = android.graphics.Typeface.DEFAULT_BOLD
-                    layoutParams = android.widget.LinearLayout.LayoutParams(-1, -2)
-                        .also { it.bottomMargin = (10 * dp).toInt() }
-                }
-                val dividerV = android.view.View(ctx).apply {
-                    setBackgroundColor(android.graphics.Color.parseColor("#2D2D4A"))
-                    layoutParams = android.widget.LinearLayout.LayoutParams(-1, 1)
-                        .also { it.bottomMargin = (14 * dp).toInt() }
-                }
-                val msgTv = android.widget.TextView(ctx).apply {
-                    text = "Join our Telegram group to discuss and share your opinion!"
-                    setTextColor(android.graphics.Color.parseColor("#A0A0A8")); textSize = 14f
-                    setLineSpacing(0f, 1.4f)
-                    layoutParams = android.widget.LinearLayout.LayoutParams(-1, -2)
-                        .also { it.bottomMargin = (18 * dp).toInt() }
-                }
-                val btnRow = android.widget.LinearLayout(ctx).apply {
-                    orientation = android.widget.LinearLayout.HORIZONTAL
-                    gravity = android.view.Gravity.END
-                }
-                val laterTv = android.widget.TextView(ctx).apply {
-                    text = "Later"
-                    setTextColor(android.graphics.Color.parseColor("#808090")); textSize = 14f
-                    val p = (10 * dp).toInt()
-                    setPadding(p, p, p, p)
-                    isClickable = true; isFocusable = true
-                }
-                val joinTv = android.widget.TextView(ctx).apply {
-                    text = "Join Telegram"
-                    setTextColor(android.graphics.Color.parseColor("#5B9BF5")); textSize = 14f
-                    typeface = android.graphics.Typeface.DEFAULT_BOLD
-                    val p = (10 * dp).toInt()
-                    setPadding(p, p, 0, p)
-                    isClickable = true; isFocusable = true
-                }
-                btnRow.addView(laterTv); btnRow.addView(joinTv)
-                root.addView(titleTv); root.addView(dividerV); root.addView(msgTv); root.addView(btnRow)
-                val dialog = android.app.AlertDialog.Builder(ctx)
-                    .setView(root).setCancelable(true).create()
-                dialog.window?.setBackgroundDrawable(
-                    android.graphics.drawable.ColorDrawable(android.graphics.Color.TRANSPARENT)
-                )
-                laterTv.setOnClickListener { dialog.dismiss() }
-                joinTv.setOnClickListener {
-                    dialog.dismiss()
-                    try {
-                        val i = android.content.Intent(android.content.Intent.ACTION_VIEW, android.net.Uri.parse("https://t.me/cncverse"))
-                        i.addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK)
-                        ctx.startActivity(i)
-                    } catch (_: Exception) {}
-                }
-                dialog.show()
-            } catch (_: Exception) {}
-        }
-    }
-    
-    private fun openInExternalBrowser(url: String) {
-        val ctx = context ?: return
-        val isTV = try {
-            com.lagradost.cloudstream3.ui.settings.Globals.isLayout(com.lagradost.cloudstream3.ui.settings.Globals.TV)
-        } catch(e: Exception) { false }
-        if (isTV) return
-        val now = System.currentTimeMillis()
-        if (now - lastBrowserOpenMs < BROWSER_DEBOUNCE_MS) return
-        lastBrowserOpenMs = now
-        android.os.Handler(android.os.Looper.getMainLooper()).post {
-            try {
-                ctx.startActivity(
-                    android.content.Intent(android.content.Intent.ACTION_VIEW, android.net.Uri.parse(url)).apply {
-                        addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK)
-                    }
-                )
-            } catch (e: Exception) { }
-        }
-    }
-
-override suspend fun loadLinks(
+    override suspend fun loadLinks(
         data: String,
         isCasting: Boolean,
         subtitleCallback: (SubtitleFile) -> Unit,
@@ -1033,41 +919,13 @@ class IptvPlaylistParser {
      *
      * Input:
      * ```
-     * https://example.com/sample.m3u8|user-agent="Custom"
+     * [https://example.com/sample.m3u8](https://example.com/sample.m3u8)|user-agent="Custom"
      * ```
      * Result: https://example.com/sample.m3u8
      */
     private fun String.getUrl(): String? {
         return split("|").firstOrNull()?.replaceQuotesAndTrim()
     }
-
-    /**
-     * Get url parameters.
-     *
-     * Example:-
-     *
-     * Input:
-     * ```
-     * http://192.54.104.122:8080/d/abcdef/video.mp4|User-Agent=Mozilla&Referer=CustomReferrer
-     * ```
-     * Result will be equivalent to kotlin map:
-     * ```Kotlin
-     * mapOf(
-     *   "User-Agent" to "Mozilla",
-     *   "Referer" to "CustomReferrer"
-     * )
-     * ```
-     */
-  /*  private fun String.getUrlParameters(): Map<String, String> {
-        val urlRegex = Regex("^(.*)\\|", RegexOption.IGNORE_CASE)
-        val headersString = replace(urlRegex, "").replaceQuotesAndTrim()
-        return headersString.split("&").mapNotNull {
-            val pair = it.split("=")
-            if (pair.size == 2) pair.first() to pair.last() else null
-        }.toMap()
-    }
-
-   */
 
     private fun String.getUrlParameter(key: String): String? {
         val urlRegex = Regex("^(.*)\\|", RegexOption.IGNORE_CASE)
@@ -1092,21 +950,6 @@ class IptvPlaylistParser {
 
     /**
      * Get attributes from `#EXTINF` tag as Map<String, String>.
-     *
-     * Example:-
-     *
-     * Input:
-     * ```
-     * #EXTINF:-1 tvg-id="1234" group-title="Kids" tvg-logo="url/to/logo", Title
-     * ```
-     * Result will be equivalent to kotlin map:
-     * ```Kotlin
-     * mapOf(
-     *   "tvg-id" to "1234",
-     *   "group-title" to "Kids",
-     *   "tvg-logo" to "url/to/logo"
-     *)
-     * ```
      */
     private fun String.getAttributes(): Map<String, String> {
         val extInfRegex = Regex("(#EXTINF:.?[0-9]+)", RegexOption.IGNORE_CASE)
@@ -1129,7 +972,6 @@ class IptvPlaylistParser {
             afterExtInf.trim()
         }
 
-
         val attributes = mutableMapOf<String, String>()
 
         // Use regex to match key="value" or key=value patterns
@@ -1151,14 +993,6 @@ class IptvPlaylistParser {
 
     /**
      * Get value from a tag.
-     *
-     * Example:-
-     *
-     * Input:
-     * ```
-     * #EXTVLCOPT:http-referrer=http://example.com/
-     * ```
-     * Result: http://example.com/
      */
     private fun String.getTagValue(key: String): String? {
         val keyRegex = Regex("$key=(.*)", RegexOption.IGNORE_CASE)
