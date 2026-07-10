@@ -1,5 +1,6 @@
 package com.cncverse
 
+import android.content.Context
 import com.lagradost.cloudstream3.Episode
 import com.lagradost.cloudstream3.HomePageList
 import com.lagradost.cloudstream3.HomePageResponse
@@ -22,6 +23,8 @@ import com.lagradost.cloudstream3.utils.Qualities
 
 class MovieLinkBDProvider : MainAPI() {
     companion object {
+        var appContext: Context? = null // Yeh line missing thi!
+        
         // The site uses a rotating subdomain mirror; we store the resolved base
         // and fall back to movielinkbd.one if the mirror fails.
         private const val FALLBACK_URL = "https://movielinkbd.one"
