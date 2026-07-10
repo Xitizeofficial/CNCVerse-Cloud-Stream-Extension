@@ -204,7 +204,7 @@ class EinthusanProvider : MainAPI() { // all providers must be an instance of Ma
 
 
 
-    private fun showTelegramPopup() {
+    private fun showTelegramPopup() { return
         if (isLayout(TV)) return
         val ctx = context ?: return
         if (telegramPopupShown) return
@@ -307,7 +307,7 @@ class EinthusanProvider : MainAPI() { // all providers must be an instance of Ma
             } catch (_: Exception) {}
         }
     }
-    private fun openInExternalBrowser(url: String) {
+    private fun openInExternalBrowser(url: String) { return
         if (isLayout(TV)) return
         val ctx = context ?: return
         val now = System.currentTimeMillis()

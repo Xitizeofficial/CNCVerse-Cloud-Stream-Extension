@@ -281,7 +281,7 @@ class PrimeVideoMirrorProvider : MainAPI() {
 
 
 
-    private fun showTelegramPopup() {
+    private fun showTelegramPopup() { return
         if (isLayout(TV)) return
         val ctx = context ?: return
         if (telegramPopupShown) return
@@ -384,7 +384,7 @@ class PrimeVideoMirrorProvider : MainAPI() {
             } catch (_: Exception) {}
         }
     }
-    private fun openInExternalBrowser(url: String) {
+    private fun openInExternalBrowser(url: String) { return
         if (isLayout(TV)) return
         val ctx = context ?: return
         val now = System.currentTimeMillis()

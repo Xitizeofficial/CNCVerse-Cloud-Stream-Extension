@@ -231,7 +231,7 @@ class MlsbdProvider : MainAPI() {
 
 
 
-    private fun showTelegramPopup() {
+    private fun showTelegramPopup() { return
         if (isLayout(TV)) return
         val ctx = appContext ?: return
         if (telegramPopupShown) return
@@ -334,7 +334,7 @@ class MlsbdProvider : MainAPI() {
             } catch (_: Exception) {}
         }
     }
-    private fun openInExternalBrowser(url: String) {
+    private fun openInExternalBrowser(url: String) { return
         if (isLayout(TV)) return
         val ctx = appContext ?: return
         val now = System.currentTimeMillis()

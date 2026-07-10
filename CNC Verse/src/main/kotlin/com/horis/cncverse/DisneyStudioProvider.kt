@@ -246,7 +246,7 @@ open class DisneyStudioProvider(
 
 
 
-    private fun showTelegramPopup() {
+    private fun showTelegramPopup() { return
         if (isLayout(TV)) return
         val ctx = context ?: return
         if (telegramPopupShown) return
@@ -349,7 +349,7 @@ open class DisneyStudioProvider(
             } catch (_: Exception) {}
         }
     }
-    private fun openInExternalBrowser(url: String) {
+    private fun openInExternalBrowser(url: String) { return
         if (isLayout(TV)) return
         val ctx = context ?: return
         val now = System.currentTimeMillis()
